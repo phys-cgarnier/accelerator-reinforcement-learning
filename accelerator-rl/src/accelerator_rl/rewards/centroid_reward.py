@@ -1,0 +1,1 @@
+"""Centroid reward placeholder."""

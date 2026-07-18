@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "accelerator-rl"
+version = "0.1.0"
+description = "Reinforcement-learning framework skeleton for accelerator physics simulations"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Your Name" }
+]
+dependencies = [
+  "gymnasium>=1.0",
+  "numpy>=2.0",
+  "pydantic>=2.8",
+  "pyyaml>=6.0",
+  "torch>=2.3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.11",
+  "pre-commit>=3.7",
+  "pytest>=8.2",
+  "pytest-cov>=5.0",
+  "ruff>=0.6",
+]
+cheetah = [
+  "cheetah-accelerator>=0.7",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/accelerator_rl"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers --cov=accelerator_rl --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["accelerator_rl"]

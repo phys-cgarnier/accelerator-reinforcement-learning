@@ -1,0 +1,1 @@
+"""Beam loss placeholder."""

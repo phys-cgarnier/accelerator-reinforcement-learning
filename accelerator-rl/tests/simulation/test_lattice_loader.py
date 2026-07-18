@@ -1,0 +1,1 @@
+"""Lattice loader test placeholder."""

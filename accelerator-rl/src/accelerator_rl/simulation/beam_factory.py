@@ -1,0 +1,1 @@
+"""Incoming beam construction utilities."""

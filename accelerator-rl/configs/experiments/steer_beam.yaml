@@ -1,0 +1,12 @@
+experiment:
+  name: steer_beam
+  seed: 0
+
+algorithm:
+  name: reinforce
+
+environment:
+  lattice: diag0
+
+reward:
+  name: centroid_target

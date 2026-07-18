@@ -1,0 +1,1 @@
+"""Control penalty placeholder."""

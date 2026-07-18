@@ -1,0 +1,1 @@
+"""Beam size reward placeholder."""
